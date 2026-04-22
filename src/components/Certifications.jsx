@@ -2,6 +2,17 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import logoDeloitte from '@assets/deloitte_1776890891093.png';
+import logoIITBhu from '@assets/iit_bhu_1776890891096.png';
+import logoIITB from '@assets/iitb_1776890891097.png';
+import logoIITD from '@assets/iitd_1776890891098.png';
+import logoJPM from '@assets/jp-morgan_1776890904405.png';
+import logoKIIT from '@assets/KIIT_logo_1776890904405.png';
+import logoBlix from '@assets/logo_webs_1776890904406.webp';
+import logoTata from '@assets/tata_1776890913954.jpg';
+import logoUiPath from '@assets/UiPath-Logo_1776890913954.png';
+import logoUnstop from '@assets/Unstop-Logo-Blue-Extra-Large_1776890913954.jpg';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const CERTS = [
@@ -10,130 +21,207 @@ const CERTS = [
     issuer: 'Google Cloud',
     skills: ['Cloud Fundamentals', 'GCP Services', 'Cloud IAM', 'Security', 'Practical Labs'],
     link: 'https://www.skills.google/public_profiles/f77be697-eb2b-4a39-9d95-db901bcf65fb',
+    initials: 'G',
+    color: 'from-blue-500 to-green-500',
   },
   {
     title: 'Microsoft Learn Achievements',
     issuer: 'Microsoft Learn',
     skills: ['Azure', 'Power Platform', 'Microsoft 365', 'AI', 'Cloud', 'Data Analysis'],
     link: 'https://learn.microsoft.com/en-us/users/preeteshkumarchaudhary-0149/achievements?tab=tab-courses',
+    initials: 'MS',
+    color: 'from-sky-500 to-cyan-500',
   },
   {
     title: 'Data Science Essentials with Python',
     issuer: 'Cisco Networking Academy',
     skills: ['Data Visualization', 'Pandas', 'Matplotlib', 'Jupyter Notebook'],
     link: 'https://www.credly.com/earner/earned/badge/c31834f3-fd8c-4d5b-bc8b-90fb2bd4a64a',
+    initials: 'C',
+    color: 'from-blue-600 to-indigo-600',
   },
   {
     title: 'Data Analytics Job Simulation',
     issuer: 'Deloitte Forage',
     skills: ['Data Analysis', 'Interpretation', 'Problem Solving', 'BI'],
     link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_9KK2rh8uLBp4AekuY_1749697987934_completion_certificate.pdf',
+    logo: logoDeloitte,
+    bg: 'bg-white',
   },
   {
     title: 'Enterprise Data Science in Practice',
     issuer: 'IBM Professional Certificate',
     skills: ['Artificial Intelligence', 'Deep Learning', 'Computer Vision', 'Chatbots'],
     link: 'https://www.credly.com/earner/earned/badge/f5eb54cb-030c-4b0e-bc13-000d2c85af8f',
+    initials: 'IBM',
+    color: 'from-blue-700 to-blue-500',
   },
   {
     title: 'Artificial Intelligence Fundamentals',
     issuer: 'IBM Professional Certificate',
     skills: ['AI Principles', 'Chatbots', 'Computer Vision', 'IBM Cloud'],
     link: 'https://www.credly.com/earner/earned/badge/60c3d97e-401d-42d4-80de-a0f389bfdb07',
+    initials: 'IBM',
+    color: 'from-blue-700 to-blue-500',
   },
   {
     title: 'Machine Learning for Data Science Projects',
     issuer: 'IBM Professional Certificate',
     skills: ['Data Modeling', 'Feature Engineering', 'Model Training', 'Hyperparameter Optimization'],
     link: 'https://www.credly.com/earner/earned/badge/cac5a964-03c5-4699-9cf5-781fe7c27fe8',
+    initials: 'IBM',
+    color: 'from-blue-700 to-blue-500',
   },
   {
     title: 'Software Engineering JS',
     issuer: 'J.P. Morgan Forage',
     skills: ['JavaScript', 'RESTful APIs', 'Client-Server', 'Debugging'],
     link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_9KK2rh8uLBp4AekuY_1749633778634_completion_certificate.pdf',
+    logo: logoJPM,
   },
   {
     title: 'GenAI Powered Data Analytics',
     issuer: 'Tata Group Forage',
     skills: ['GenAI', 'Data Analytics', 'No-Code Models', 'Risk Analysis'],
     link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_9KK2rh8uLBp4AekuY_1749698893391_completion_certificate.pdf',
+    logo: logoTata,
+    bg: 'bg-white',
   },
   {
     title: 'Automation Implementation Methodology',
     issuer: 'UiPath Academy',
     skills: ['RPA', 'Automation Design', 'Implementation Strategy'],
     link: 'https://www.linkedin.com/in/preetesh-chaudhary-75621a1b0/',
+    logo: logoUiPath,
+    bg: 'bg-white',
   },
   {
     title: 'National Space Hackathon 2025',
     issuer: 'Unstop • IIT Delhi',
     skills: ['Hackathon', 'Teamwork', 'Space Technology'],
     link: 'https://unstop.com/certificate-preview/d3d17e6f-b1ce-4be5-ab51-c7c8647584ae',
+    logo: logoUnstop,
+    bg: 'bg-white',
+  },
+  {
+    title: 'IIT Delhi Hackathon',
+    issuer: 'Indian Institute of Technology Delhi',
+    skills: ['Hackathon', 'Innovation', 'Engineering'],
+    link: 'https://unstop.com/certificate-preview/d3d17e6f-b1ce-4be5-ab51-c7c8647584ae',
+    logo: logoIITD,
+    bg: 'bg-white',
   },
   {
     title: 'Konnexions IT & Web Development Society',
     issuer: 'KIIT Student Activity Centre',
     skills: ['HTML', 'CSS', 'JavaScript', 'Web Project Management'],
     link: 'https://drive.google.com/drive/folders/1DrKvNdHXp_8_rWRjxyfY886X67uhhZrT',
+    logo: logoKIIT,
   },
   {
     title: "Pravaah '25 Soccer Tournament",
     issuer: 'IIT Bhubaneswar',
     skills: ['Arduino IDE', 'Embedded Systems', 'Robotics'],
     link: 'https://www.linkedin.com/in/preetesh-chaudhary-75621a1b0/',
+    logo: logoIITBhu,
+    bg: 'bg-white',
   },
   {
     title: 'KiiT Fest 8.0',
     issuer: 'KIIT, Bhubaneswar',
     skills: ['Event Participation', 'Coding', 'Teamwork'],
     link: 'https://www.linkedin.com/in/preetesh-chaudhary-75621a1b0/',
+    logo: logoKIIT,
   },
   {
     title: 'Blixathon (Techfest) Runner-up',
     issuer: 'Blix Education • IIT Bombay',
     skills: ['Robotic Design', 'Team Collaboration', 'Electronics'],
     link: 'https://www.linkedin.com/in/preetesh-chaudhary-75621a1b0/',
+    logo: logoBlix,
+  },
+  {
+    title: 'IIT Bombay Techfest Participation',
+    issuer: 'Indian Institute of Technology Bombay',
+    skills: ['Robotics', 'Innovation', 'Competition'],
+    link: 'https://www.linkedin.com/in/preetesh-chaudhary-75621a1b0/',
+    logo: logoIITB,
+    bg: 'bg-white',
   },
   {
     title: 'Tech Royale • KIIT FEST 7.0',
     issuer: 'KIIT, Bhubaneswar',
     skills: ['Arduino IDE', 'Robotics', 'Console Game Development'],
     link: 'https://www.linkedin.com/in/preetesh-chaudhary-75621a1b0/',
+    logo: logoKIIT,
   },
   {
     title: 'Java (Certificate)',
     issuer: 'HackerRank',
     skills: ['Core Java', 'OOP', 'Data Structures', 'Problem Solving'],
     link: 'https://www.hackerrank.com/certificates/iframe/dabba64948d3',
+    initials: 'HR',
+    color: 'from-emerald-500 to-green-600',
   },
   {
     title: 'Python (Certificate)',
     issuer: 'HackerRank',
     skills: ['Python', 'Data Analysis', 'Scripting', 'Algorithms'],
     link: 'https://www.hackerrank.com/certificates/8e7f1df88520',
+    initials: 'HR',
+    color: 'from-emerald-500 to-green-600',
   },
   {
     title: 'SQL (Intermediate) Certificate',
     issuer: 'HackerRank',
     skills: ['Intermediate SQL', 'Joins', 'Query Optimization'],
     link: 'https://www.hackerrank.com/certificates/10fd30612619',
+    initials: 'HR',
+    color: 'from-emerald-500 to-green-600',
   },
 ];
+
+const Logo = ({ cert }) => {
+  if (cert.logo) {
+    return (
+      <div className={`h-12 w-12 rounded-lg flex items-center justify-center overflow-hidden flex-shrink-0 ${cert.bg || 'bg-white/5'} border border-white/10`}>
+        <img
+          src={cert.logo}
+          alt={cert.issuer}
+          className="max-h-10 max-w-10 object-contain"
+        />
+      </div>
+    );
+  }
+  return (
+    <div className={`h-12 w-12 rounded-lg flex items-center justify-center flex-shrink-0 bg-gradient-to-br ${cert.color || 'from-red-500 to-red-700'} text-white font-bold text-sm tracking-tight shadow-lg`}>
+      {cert.initials || '★'}
+    </div>
+  );
+};
 
 export default function Certifications() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(sectionRef.current.querySelectorAll('.cert-card'), {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 85%' },
-        opacity: 0,
-        y: 30,
-        duration: 0.6,
-        stagger: 0.05,
-        ease: 'power3.out',
-      });
+      gsap.fromTo(
+        sectionRef.current.querySelectorAll('.cert-card'),
+        { opacity: 0, y: 30 },
+        {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.05,
+          ease: 'power3.out',
+          immediateRender: false,
+        }
+      );
     }, sectionRef);
     return () => ctx.revert();
   }, []);
@@ -153,7 +241,7 @@ export default function Certifications() {
             </span>
           </h2>
           <p className="text-gray-400 font-light tracking-wide text-base md:text-lg max-w-xl mt-6 leading-relaxed">
-            Verified credentials from Google, Microsoft, IBM, Cisco, AWS, J.P. Morgan, Tata, and more.
+            Verified credentials from Google, Microsoft, IBM, Cisco, J.P. Morgan, Tata, IITs, and more.
           </p>
         </div>
 
@@ -166,12 +254,17 @@ export default function Certifications() {
               rel="noopener noreferrer"
               className="cert-card group relative rounded-xl border border-white/10 bg-white/[0.02] p-5 hover:border-red-500/40 hover:bg-white/[0.05] hover:-translate-y-1 transition-all duration-500 flex flex-col"
             >
-              <h3 className="text-base font-semibold text-white mb-1 tracking-tight leading-snug">
-                {c.title}
-              </h3>
-              <p className="text-xs text-red-400/80 font-mono tracking-wide uppercase mb-3">
-                {c.issuer}
-              </p>
+              <div className="flex items-start gap-3 mb-3">
+                <Logo cert={c} />
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-base font-semibold text-white mb-1 tracking-tight leading-snug pr-4">
+                    {c.title}
+                  </h3>
+                  <p className="text-xs text-red-400/80 font-mono tracking-wide uppercase">
+                    {c.issuer}
+                  </p>
+                </div>
+              </div>
               <div className="flex flex-wrap gap-1.5 mt-auto">
                 {c.skills.map((s) => (
                   <span
