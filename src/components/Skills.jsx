@@ -20,14 +20,23 @@ export default function Skills() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(sectionRef.current.querySelectorAll('.skill-card'), {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 80%' },
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        stagger: 0.08,
-        ease: 'power3.out',
-      });
+      gsap.fromTo(
+        sectionRef.current.querySelectorAll('.skill-card'),
+        { opacity: 0, y: 40 },
+        {
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.08,
+          ease: 'power3.out',
+          immediateRender: false,
+        }
+      );
     }, sectionRef);
     return () => ctx.revert();
   }, []);
