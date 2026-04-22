@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import logoGoogle from '@assets/image_1776891405782.png';
 import logoDeloitte from '@assets/deloitte_1776890891093.png';
 import logoIITBhu from '@assets/iit_bhu_1776890891096.png';
 import logoIITB from '@assets/iitb_1776890891097.png';
@@ -21,7 +22,7 @@ const CERTS = [
     issuer: 'Google Cloud',
     skills: ['Cloud Fundamentals', 'GCP Services', 'Cloud IAM', 'Security', 'Practical Labs'],
     link: 'https://www.skills.google/public_profiles/f77be697-eb2b-4a39-9d95-db901bcf65fb',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Google-cloud-platform.svg',
+    logo: logoGoogle,
     bg: 'bg-white',
   },
   {
