@@ -7,62 +7,72 @@ import imgMan from '../assets/man/1775519899126.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MISSIONS = [
+const BLENDS = [
+  'mix-blend-luminosity brightness-75',
+  'mix-blend-luminosity grayscale',
+  'mix-blend-overlay brightness-125 saturate-150',
+];
+
+const RAW_MISSIONS = [
   {
-    id: '01',
+    name: 'Intelligent Microclimate Monitoring & Prediction System',
+    description: 'End-to-end IoT system with Arduino sensors streaming to a Flask backend, an ensemble ML model with weighted soft-voting for live weather classification and 2-hour forecasting, plus an automated retraining pipeline.',
+    tech: ['C++', 'Arduino', 'Python', 'Flask', 'Scikit-learn'],
+  },
+  {
+    name: 'Banking Transaction Microservice',
+    description: 'Production-style Spring Boot microservice built during the J.P. Morgan simulation — REST APIs, JPA + H2 persistence, and event-driven Kafka messaging mirroring enterprise banking architecture.',
+    tech: ['Spring Boot', 'Kafka', 'JPA', 'Maven'],
+  },
+  {
     name: 'Traffic Violation Detection System',
-    description: 'AI-powered web app processing video feeds to detect violations like red-light running and helmet violations with automated evidence collection.',
+    description: 'AI-powered full-stack platform processing live video feeds for red-light and helmet violations, combining OpenCV and YOLOv8 with automated evidence collection in PostgreSQL.',
     tech: ['YOLOv8', 'FastAPI', 'React', 'PostgreSQL'],
-    image: imgSpiderman,
-    link: '#',
-    blend: 'mix-blend-luminosity brightness-75',
   },
   {
-    id: '02',
-    name: 'BookEasy Chatbot',
-    description: 'Conversational AI for book discovery with semantic search, recommendations, and reservations using RAG architecture.',
-    tech: ['LLM', 'Pinecone', 'Node.js', 'Websockets'],
-    image: imgMan,
-    link: '#',
-    blend: 'mix-blend-luminosity grayscale',
+    name: 'BookEasy Chatbot — RAG Architecture',
+    description: 'Conversational AI for real-time book discovery and reservation, powered by a RAG pipeline with Pinecone vector search, WebSocket messaging, and a React + PostgreSQL stack.',
+    tech: ['LLM', 'Pinecone', 'Node.js', 'WebSockets', 'React'],
   },
   {
-    id: '03',
-    name: 'AI Traffic Light System',
-    description: 'Multi-intersection adaptive signal control using reinforcement learning to optimize traffic flow and create green corridors.',
-    tech: ['Jetson', 'YOLO', 'SUMO', 'RL'],
-    image: imgSpiderman,
-    link: '#',
-    blend: 'mix-blend-overlay brightness-125 saturate-150',
+    name: 'IIT Bombay Demo Website',
+    description: 'Production-quality full-stack site with a Sanity CMS-driven backend, AI-powered search, and project, team, and event management — handled end-to-end through deployment.',
+    tech: ['Next.js', 'React', 'Tailwind', 'Sanity CMS', 'LLM'],
   },
   {
-    id: '04',
+    name: 'AI Traffic Light Optimization',
+    description: 'Multi-intersection adaptive signal control using reinforcement learning on a Jetson Nano with YOLOv8 vehicle detection, trained in the SUMO traffic simulator for green-corridor optimization.',
+    tech: ['C++', 'RL', 'YOLOv8', 'SUMO', 'Jetson Nano'],
+  },
+  {
     name: 'Autonomous RC Boat',
-    description: 'Remote-controlled boat with GPS waypoint navigation and obstacle avoidance using a Pixhawk controller.',
-    tech: ['Pixhawk', 'GPS', 'IMU', 'MAVLink'],
-    image: imgMan,
-    link: '#',
-    blend: 'mix-blend-luminosity brightness-75',
+    description: 'Remote-controlled boat with GPS waypoint navigation and real-time obstacle avoidance using a Pixhawk flight controller and the MAVLink protocol for open-water autonomy.',
+    tech: ['Pixhawk', 'MAVLink', 'GPS', 'IMU', 'Python'],
   },
   {
-    id: '05',
     name: 'Sand Rover — IIT Kharagpur',
-    description: 'All-terrain rover with 6WD and traction control, designed for sand navigation challenges.',
-    tech: ['ROS', 'LiDAR', 'BLDC', 'Tracks'],
-    image: imgSpiderman,
-    link: '#',
-    blend: 'mix-blend-luminosity grayscale',
+    description: 'All-terrain 6WD rover with traction control optimized for sand navigation using ROS and LiDAR — qualified for the Techfest IIT Kharagpur Sand Rover Challenge.',
+    tech: ['ROS', 'LiDAR', 'BLDC', 'C++', 'CAD'],
   },
   {
-    id: '06',
     name: 'Arduino Gaming Console',
-    description: 'Handheld gaming device with classics like Snake and Tetris, built on ESP32 with a TFT display and 3D-printed enclosure.',
-    tech: ['ESP32', 'Arduino', '3D Printing', 'Game Dev'],
-    image: imgMan,
-    link: '#',
-    blend: 'mix-blend-overlay brightness-125 saturate-150',
+    description: 'Handheld gaming device running Snake and Tetris on an ESP32 + TFT display with custom 3D-printed enclosure — full hardware-software co-design.',
+    tech: ['ESP32', 'Arduino', 'C++', 'TFT', '3D Printing'],
+  },
+  {
+    name: 'Personal Portfolio Website',
+    description: 'Fully responsive portfolio at preeteshprofile.vercel.app — clean, mobile-compatible UI built with HTML, CSS, JavaScript, and Tailwind CSS, deployed on Vercel.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Tailwind', 'Vercel'],
   },
 ];
+
+const MISSIONS = RAW_MISSIONS.map((m, i) => ({
+  ...m,
+  id: String(i + 1).padStart(2, '0'),
+  image: i % 2 === 0 ? imgSpiderman : imgMan,
+  blend: BLENDS[i % BLENDS.length],
+  link: '#',
+}));
 
 const ProjectCard = ({ project }) => {
   const cardRef = useRef(null);

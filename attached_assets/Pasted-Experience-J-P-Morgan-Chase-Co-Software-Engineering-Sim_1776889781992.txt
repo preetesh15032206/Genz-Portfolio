@@ -1,0 +1,83 @@
+Experience
+J.P. Morgan Chase & Co. – Software Engineering Simulation Remote (Forage)
+Virtual Software Engineering Intern | Credential: n5AnEckjWGehwtKHK Jun 2025
+• Developed an interactive full-stack client interface using JavaScript and Python; integrated RESTful APIs
+to fetch and visualize live financial data in real time.
+• Simulated a real-world trading environment; improved client-server data handling and debugging efficiency
+by optimizing API request-response flow and wrote clean, well-documented code.
+Deloitte Australia – Technology & Data Analytics Simulation Remote (Forage)
+Virtual Technology Intern | Credential: iScgAjwmF7K3QcTp4 Jun 2025
+• Implemented modular programming logic to automate business workflows; integrated APIs and backend
+services for seamless data communication and Git version control throughout.
+• Delivered a fully working end-to-end prototype with documented architecture plans meeting enterprise IT
+standards.
+Tata Group – GenAI Powered Data Analytics Simulation Remote (Forage)
+Virtual Data Analytics Intern | Credential: E7dT3fYGu9z6FEpxp Jun 2025
+• Performed EDA using GenAI tools to assess financial risk; proposed an ethical no-code AI model for
+customer delinquency prediction and designed an automated collections strategy.
+AWS APAC – Solutions Architecture Simulation Remote (Forage)
+Virtual Cloud Architecture Intern Jun 2025
+• Designed a scalable, secure cloud architecture using AWS (EC2, S3, Lambda); implemented
+cost-optimization and security configurations; produced full deployment documentation.
+KIIT Fest 8.0 – Decode and Dominate Bhubaneswar, India
+Event Organizer & Host | Credential: 2306209 Feb 2025
+• Organized a national-level technical event with 100+ participants covering competitive coding, quizzes, logical
+rounds, and a KIIT portal redesign task; managed end-to-end logistics and operations.
+Blixathon – Kit Mastery (Seniors) IIT Bombay, India
+Technical Competitor | Runner-Up | Credential: 230449 Dec 2024
+• Designed and assembled a functional robotics prototype showcasing embedded systems and hardware
+integration under timed conditions; secured Runner-Up at IIT Bombay’s international Techfest.
+Pravaah ’25 – Robotics Challenge IIT Bhubaneswar, India
+Team Lead | Top 8 Qualifier | Credential: 2306209 Apr 2025
+• Led team to top 8 at IIT Bhubaneswar applying Arduino IDE and embedded systems in a live competitive
+challenge.
+KIIT Fest 7.0 – Tech Royale Bhubaneswar, India
+Finalist – Coding, Robotics & Console Assembly | Credential: 2306209 Feb 2024
+• Competed in quiz, competitive coding, gaming, and Arduino Uno console assembly; built a custom gaming
+console and secured 2nd Runner-Up in the final round.
+Projects
+Intelligent Microclimate Monitoring & Prediction System | C++, Arduino, Python, Flask, ML, Scikit-learn
+• Developed an end-to-end IoT system using C++-programmed Arduino sensors (temperature, humidity,
+UV, pressure, rainfall) interfaced via serial communication to a Python/Flask backend — covering full
+hardware-to-application SDLC.
+• Implemented feature engineering (time-based features, moving-average smoothing) and trained an ensemble
+ML model (Random Forest, Gradient Boosting, KNN, Decision Tree) with weighted soft-voting for real-time
+weather classification and 2-hour forecasting.
+• Built a live dashboard with model comparison, confidence scoring, and an automated data logging and
+retraining pipeline — demonstrating component integration, issue handling, and lifecycle maintenance.
+Banking Transaction Microservice (J.P. Morgan Simulation) | Spring Boot, Kafka, JPA, H2, REST, Maven
+• Built a production-style microservice following a structured SDLC: requirements analysis, component design,
+coding, REST API integration, and Maven-based test suite verification with embedded Kafka.
+• Applied Spring Boot + JPA + H2 for data persistence; implemented event-driven messaging via Kafka —
+mirroring enterprise banking transaction processing architecture.
+Traffic Violation Detection System | C++, YOLOv8, FastAPI, React, PostgreSQL, OpenCV
+• Designed an AI-powered full-stack platform processing live video feeds for violation detection (red-light
+running, helmet violations); combined OpenCV and YOLOv8 modules into a cohesive subsystem with
+automated evidence collection.
+• Applied modular component design, integrating open-source libraries into a production-ready React +
+FastAPI service layer with PostgreSQL schema for structured evidence storage.
+BookEasy Chatbot (RAG Architecture) | LLM, Pinecone, Node.js, WebSockets, React, PostgreSQL
+• Developed a conversational AI chatbot with RAG pipeline and semantic vector search via Pinecone for
+real-time book discovery and reservation management.
+• Node.js backend with REST API endpoints and WebSocket real-time messaging; React frontend with
+PostgreSQL persistence — demonstrating NLP, vector databases, and scalable backend integration.
+IIT Bombay Demo Website | Next.js, React, Tailwind CSS, Sanity CMS, LLM, REST API
+• Delivered a production-quality full-stack website with CMS-driven backend, AI-powered search, responsive
+UI, and project/team/event management — handling complete end-to-end development and deployment.
+Personal Portfolio Website | HTML, CSS, JavaScript, Tailwind CSS, Vercel
+• Designed and deployed a fully responsive portfolio at preeteshprofile.vercel.app using HTML, CSS, JavaScript,
+and Tailwind CSS with clean mobile-compatible UI.
+AI Traffic Light Optimization | C++, Reinforcement Learning, YOLOv8, SUMO, Jetson Nano
+• Built a multi-intersection adaptive signal control system using RL on Jetson Nano, reducing simulated
+congestion; leveraged C++ for real-time decision-making and hardware interface layers.
+• Deployed YOLOv8 vehicle detection on Jetson; trained RL agents in SUMO traffic simulator — complete
+AI pipeline from data collection to edge deployment.
+Autonomous RC Boat | Pixhawk, MAVLink, GPS, IMU, Python
+• Engineered a remote-controlled boat with GPS waypoint navigation and real-time obstacle avoidance using
+Pixhawk flight controller and MAVLink protocol for open-water autonomous operation.
+Sand Rover – IIT Kharagpur | ROS, LiDAR, BLDC Motors, C++, CAD
+• Designed an all-terrain 6WD rover with traction control optimized for sand navigation using ROS and
+LiDAR; qualified for Techfest IIT Kharagpur Sand Rover Challenge.
+Arduino Gaming Console | ESP32, Arduino, C++, TFT Display, 3D Printing
+• Built a handheld gaming device with Snake and Tetris using ESP32 + TFT display; programmed game logic
+in C++ on Arduino IDE and designed a custom 3D-printed enclosure — full hardware-software co-design.
